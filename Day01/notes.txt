@@ -1,0 +1,18 @@
+HTML Elements ->input, body
+Attributes -> type="", value=""
+Browsers parse your HTML code (interpret)
+Each browser uses a toolkit for all the rendering work
+Safari, Chrome -> Webkit
+IE -> ms
+Firefox -> mozilla
+Opera -> o
+
+DOM -> Document Object Model
+It's a specification; It's an API
+
+Select a prog. language (usually JavaScript)
+Use the DOM API
+Manipulate the tree
+
+The default StyleSheets are applied
+You can specify your own style Sheet (CSS)

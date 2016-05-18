@@ -1,0 +1,26 @@
+<html>
+	<!-- Relaxed syntax -->
+	<head>
+		<style>
+			#message {
+				color: red;
+			}
+		</style>
+		
+		<script>
+			//JavaScript
+			function doSomething(){
+				var fname = document.getElementById("firstname").value;
+				var lname = document.getElementById("lastname").value;
+				var msg = "Hi " + fname + " " + lname + "!!!";
+				document.getElementById("message").innerText = msg;
+			}
+		</script>
+	</head>	
+	<body>
+		<input type="text" placeholder="First Name" id="firstname"><br/>
+		<input type="text" placeholder="Last Name" id="lastname"><br/>
+		<input type="button" value="Go" id="gobutton" onclick="doSomething()"><br/>
+		<h1 id="message"></h1>
+	</body>	
+</html>
