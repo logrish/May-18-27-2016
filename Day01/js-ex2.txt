@@ -7,7 +7,7 @@ compute(5) //Print the first five numbers in the array
 compute() //Print all the numbers
 compute("even")//Print all the even numbers in the array
 compute("odd")//Print all the odd numbers in the array
-compute(2,"even")//Print three even numbers
+compute(2,"even")//Print two even numbers
 compute(3,"odd")//Print three odd numbers
 compute("jkfdkdsfkj")//Print an error message
 compute(1,2,3,34,4)//Print an error message
