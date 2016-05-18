@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		@media print{
+			body {
+				background-color: white;
+			}
+			label {
+				color : red;
+			}
+		}
+		
+		@media screen{
+			body{
+				background-color: yellow;
+				font-style: italic;
+			}
+			label {
+				color:green;
+			}
+			#genderlabel {
+				color: red;
+			}
+			/*#firstnamelabel,#lastnamelabel {
+				color: blue;
+			}*/
+			.name {
+				color: blue;
+			}
+		}
+				
+		</style>
+	</head>	
+	<body>
+		<label for="firstname" id="firstnamelabel" class="name">First Name</label>
+		<input type="text" id="firstname"><br/>
+		
+		<label for="lastname" id="lastnamelabel" class="name">Last Name</label>
+		<input type="text" id="lastname"><br/>
+		
+		<label for="gender" id="genderlabel">Gender</label>
+		Male<input type="radio" name="gender">
+		Female<input type="radio" name="gender" checked>
+		Trans<input type="radio" name="gender"><br/>
+			
+		<label for="newsletter">Subscribe for Newsletter?</label>
+		<input type="checkbox" id="newsletter" checked><br/>
+		
+		<label for="country">Country</label>
+		<select id="country">
+			<option>--SELECT--</option>
+			<option>India</option>
+			<option>USA</option>
+			<option>UK</option>
+		</select>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+body{
+	background-color: yellow;
+	font-style: italic;
+}
+label {
+	color:green;
+}
+#genderlabel {
+	color: red;
+}
+/*#firstnamelabel,#lastnamelabel {
+	color: blue;
+}*/
+.name {
+	color: blue;
+}
