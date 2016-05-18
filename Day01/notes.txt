@@ -16,3 +16,27 @@ Manipulate the tree
 
 The default StyleSheets are applied
 You can specify your own style Sheet (CSS)
+
+CSS syntax
+selector {
+	property:value;
+	property:value;
+	...
+}
+selector can be elements or #id or .classname
+@media screen|print
+external stylesheet -> <link rel="" href="" media="">
+internal stylesheet -> <style> ... </style>
+inline style -> <input style="..."> takes precedence
+
+
+
+
+
+
+
+
+
+
+
+
