@@ -1,4 +1,4 @@
-Creatw a js-Ex1.js file. Create a function called 'math' which is a higher order function.
+Create a js-Ex1.js file. Create a function called 'math' which is a higher order function.
 math function has a list of 10 numbers. 
 12,4,56,3,123,74,8,3,234,987.
 
