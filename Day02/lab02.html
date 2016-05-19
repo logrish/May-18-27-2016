@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen">
+		<style>
+			header img {
+				height: 10%;
+				width: 10%;
+			}
+			.correcticon {
+				color: green;
+				display:none;
+			}
+			.incorrecticon {
+				color: red;
+				display:none;
+			}
+			#loginsection {
+				position: relative;
+				left: 40%;
+			}
+			input {
+				width: 20%;
+			}
+			button {
+				width: 20%;
+			}
+		</style>
+		<script>
+		function getElement(id){
+			return document.getElementById(id);
+		}
+		function login(){
+			var userName = getElement("username").value;
+			var password = getElement("password").value;
+			if(userName != "admin"){
+				getElement("usernameincorrect").style.display = "inline";
+				getElement("usernamecorrect").style.display = "none";
+			}
+			else{
+				getElement("usernameincorrect").style.display = "none";
+				getElement("usernamecorrect").style.display = "none";
+			}
+				
+			if(password != "admin"){
+				getElement("passwordincorrect").style.display = "inline";
+			}
+			else
+				getElement("passwordincorrect").style.display = "none";
+		}
+		function userNameBlurred(){
+			var userName = getElement("username").value;
+			if(userName == "admin"){
+				getElement("usernamecorrect").style.display = "inline";
+				getElement("usernameincorrect").style.display = "none";
+			}
+			else{
+				getElement("usernamecorrect").style.display = "none";
+				getElement("usernameincorrect").style.display = "inline";
+			}
+				
+		}
+		</script>
+	</head>
+	<body>
+		<header>
+			<img src="logo.png">
+		</header>
+		<hr/>
+		<section id="loginsection">
+			<p>
+				<input type="text" id="username" placeholder="User Name" onblur="userNameBlurred()">
+				<i class="fa fa-check correcticon"  id="usernamecorrect"></i>
+				<i class="fa fa-times incorrecticon" id="usernameincorrect"></i>
+			</p>
+			<p>
+				<input type="password" id="password" placeholder="Password">
+				<i class="fa fa-check correcticon" id="passwordcorrect"></i>
+				<i class="fa fa-times incorrecticon" id="passwordincorrect"></i>
+			</p>
+			<p>
+				<button type="button" onclick="login()">Login</button>
+			</p>
+		</section>
+	</body>		
+</html>
