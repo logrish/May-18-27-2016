@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<style>
+		.outer{
+			width:80%;
+			height:60%;
+			border:solid;
+			border-width:0.2px;
+			padding:2%;
+			margin: 2%;
+		}
+		.inner {
+			width:20%;
+			height:20%;
+			border:solid;
+			border-width:0.2px;
+			padding:5%;
+			margin:0.5%;
+			float:left;
+			text-align:center;
+			-webkit-transition: 5s;
+		}
+		#innerX:hover{
+			width:30%;
+			font-size:5em;
+			-webkit-transform: scale(1.2);
+		}
+		#innerY:hover {
+			-webkit-transform: rotateY(360deg);
+		}
+		#innerZ:hover {
+			-webkit-transform: rotateZ(360deg);
+		}
+		
+		
+		</style>
+	</head>	
+	<body>
+		<div class="outer">
+			<div class="inner" id="innerX">X</div>
+			<div class="inner" id="innerY">Y</div>
+			<div class="inner" id="innerZ">Z</div>	
+		</div>	
+	</body>	
+</html>
