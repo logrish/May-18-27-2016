@@ -1,0 +1,18 @@
+input {
+	width: 70%;
+}
+.movieform {
+	border: solid;
+	border-width: 0.2px;
+	width: 30%;
+	padding: 5% 0 5% 15%;
+	margin: 10% 0 0 30%;
+}
+.movieformfooter{
+	margin: 1% 0 5% 50%;
+}
+.moviestable {
+	width:30%;
+	border: 0;
+	margin: 1% 0 5% 45%;
+}
