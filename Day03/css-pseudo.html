@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<style>
+			p:first-child {
+				background-color : yellow;
+			}
+			p:last-child {
+				background-color: red;
+			}
+			p:nth-child(3){
+				background-color: gray;
+			}
+			p:hover {
+				background-color: blue;
+			}
+			li:nth-child(even):hover {
+				font-size: 30px;
+			}
+			
+			li:nth-child(odd){
+				background-color: green;
+			}
+			p::before {
+				content: "This is inserted dynamically ";
+				color: green;
+			}
+			p::after {
+				content: " WTH ";
+				font-size: 45px;
+			}
+		</style>
+	</head>	
+	<body>
+		<ul>
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+			<li>Four</li>
+			<li>Five</li>
+		</ul>	
+		<p>This is para 1</p>
+		<p>This is para 2</p>
+		<p>This is para 3</p>
+		<p>This is para 4</p>
+		<p>This is para 5</p>
+	</body>	
+</html>
