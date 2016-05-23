@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script>
+			//Local Storage, Session Storage, WebSQL, IndexedDB
+			//setItem, getItem, removeItem
+		var value = localStorage.getItem("company");
+		if(value != undefined)
+			alert("Loaded from LS " + value);
+		else{
+			localStorage.setItem("company","Accenture");
+			alert("Just loaded from LS " + localStorage.getItem("company"));
+		}
+		
+		var value2 = sessionStorage.getItem("training");
+		if(value2 != undefined)
+			alert("Loaded from SS " + value2);
+		else{
+			sessionStorage.setItem("training","HTML5");
+			alert("Just loaded from SS " + sessionStorage.getItem("training"));
+		}
+		
+		
+		</script>
+	</head>	
+</html>

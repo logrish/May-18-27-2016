@@ -15,6 +15,12 @@ HTML 5
 	Canvas API
 	File Upload
 	
+Data Storage -> LocalStorage, SessionStorage, IndexedDB, WebSQL
+Stored in the browser memory (typically client machine)
+Does not travel automatically back and forth btn the client and the server
+Will be available as long as you don't clear cache explicitly. Don't have an expiry date		
+	
+	
 	
 
 
