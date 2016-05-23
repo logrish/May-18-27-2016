@@ -1,3 +1,26 @@
+Overview
+JS
+CSS
+jQuery
+HTML 5
+	latest version of HTML
+	multimedia without depending on third party plugins
+	new set of UI tags; built-in validations
+	Data storage (5 MB per application per browser)
+	Drag and Drop API
+	GeoLocation
+	History API
+	WebSockets
+	Web Realtime communication
+	Canvas API
+	File Upload
+	
+	
+
+
+
+
+
 $("CSS selector expression").someFunction();
 
 $("expre").val()
