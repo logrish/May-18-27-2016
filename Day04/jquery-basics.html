@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script src="jquery-2.2.4.min.js"></script>
+		<script>
+		function doSomething(){
+			var firstName = $("#firstname").val();
+			var lastName = $("#lastname").val();
+			$("#message").text("Hi " + firstName);
+			$('#message').css("color","red");
+			$('#firstname').hide();	
+		}
+		function init(){
+			console.log("The body has been loaded");
+		}
+		</script>
+		
+	</head>
+	<body onload="init()">
+		<p>
+			<input type="text" id="firstname" placeholder="first name">
+		</p>
+		<p>
+			<input type="text" id="lastname" placeholder="last name">
+		</p>
+		<p>
+			<button type="button" onclick="doSomething();">Click</button>
+		</p>
+		<h1 id="message"></h1>
+	</body>		
+</html>

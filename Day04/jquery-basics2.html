@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script src="jquery-2.2.4.min.js"></script>
+		<script>
+		$().ready(init);
+		function init(){
+			$('#clickbutton').on("click",doSomething);
+			$('#firstname').on("focus",doSomethingHere)
+			$('#firstname').on("blur",doSomethingElseHere)
+		}
+		function doSomethingElseHere(){
+			$('#firstname').css("background-color","white");
+		}
+		function doSomethingHere(){
+			$('#firstname').css("background-color","yellow");
+		}
+		function doSomething(){
+			console.log("Button clicked");
+		}
+		</script>
+	</head>
+	<body>
+		<p>
+			<input type="text" id="firstname" placeholder="first name">
+		</p>
+		<p>
+			<input type="text" id="lastname" placeholder="last name">
+		</p>
+		<p>
+			<button type="button" id="clickbutton">Click</button>
+		</p>
+		<h1 id="message"></h1>
+	</body>		
+</html>
