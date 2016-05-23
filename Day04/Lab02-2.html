@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script src="jquery-2.2.4.min.js"></script>
+		<script>
+		$().ready(function(){
+			$('#octet1,#octet2,#octet3,#octet4').
+				css("width","40px").
+				attr("maxlength","3").
+				on('keyup',octet_changed);
+			$('#clickbutton').on("click",button_clicked);
+		});
+		function octet_changed(){
+			if($(this).val().length == 3){
+				if($(this).attr("id") == "octet4")
+					$("#clickbutton").focus();
+				else
+					$(this).next().focus();
+			}
+		}
+		
+		function button_clicked(){
+			$('#octet1,#octet2,#octet3,#octet4').attr("disabled","disabled");
+		}
+		
+		</script>
+	</head>
+	<body>
+		<p>
+			<span>IP address: </span>
+			<input type="text" id="octet1">.
+			<input type="text" id="octet2">.
+			<input type="text" id="octet3">.
+			<input type="text" id="octet4">
+		</p>
+		<button type="button" id="clickbutton">Click</button>	
+	</body>
+</html>			

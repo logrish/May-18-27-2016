@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="jquery-2.2.4.min.js"></script>
+		<script>
+		$().ready(function(){
+			$('button').on("click",modifyDiv);
+		});
+		function modifyDiv(){
+			var tb = "<input type='text' placeholder='cool'>";
+			var new_btn = "<input type='button' value='new'>";
+			$('div').append(tb);
+			$('button').after(new_btn);
+			$('button').before('<p>Hungry or Angry???</p>');
+		}
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<button type="button">DOM</button>	
+	</body>
+</html>			
