@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<script src="jquery-2.2.4.min.js"></script>
+		<script>
+		$().ready(function(){
+			changeStyleOfOctets();
+			$('#octet1').on('keyup',octet1_changed);
+			$('#octet2').on('keyup',octet2_changed);
+			$('#octet3').on('keyup',octet3_changed);
+			$('#octet4').on('keyup',octet4_changed);
+			$('#clickbutton').on("click",button_clicked);
+		});
+		function changeStyleOfOctets(){
+			$('#octet1').css("width","40px");
+			$('#octet1').attr("maxlength","3");
+			$('#octet2').css("width","40px");
+			$('#octet2').attr("maxlength","3");
+			$('#octet3').css("width","40px");
+			$('#octet3').attr("maxlength","3");
+			$('#octet4').css("width","40px");
+			$('#octet4').attr("maxlength","3");
+		}
+		function button_clicked(){
+			$('#octet1').attr("disabled","disabled");
+			$('#octet2').attr("disabled","disabled");
+			$('#octet3').attr("disabled","disabled");
+			$('#octet4').attr("disabled","disabled");
+		}
+		function octet1_changed(){
+			if($('#octet1').val().length == 3)
+				$('#octet2').focus();
+		}
+		function octet2_changed(){
+			if($('#octet2').val().length == 3)
+				$('#octet3').focus();
+		}
+		function octet3_changed(){
+			if($('#octet3').val().length == 3)
+				$('#octet4').focus();
+		}
+		function octet4_changed(){
+			if($('#octet4').val().length == 3)
+				$('#clickbutton').focus();
+		}
+		</script>
+	</head>
+	<body>
+		<p>
+			<span>IP address: </span>
+			<input type="text" id="octet1">.
+			<input type="text" id="octet2">.
+			<input type="text" id="octet3">.
+			<input type="text" id="octet4">
+		</p>
+		<button type="button" id="clickbutton">Click</button>	
+	</body>
+</html>			
