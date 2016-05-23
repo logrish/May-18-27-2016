@@ -1,0 +1,13 @@
+$("CSS selector expression").someFunction();
+
+$("expre").val()
+$("expre").val("skjdfhasjhfd")
+
+$("expr").text("sdklafhasfdh")
+$("expr").text()
+
+$("expr").html("HTML CONTENTS")
+$("expr").html()
+
+$('expr').css("property","value")
+$('expr').css("property")
