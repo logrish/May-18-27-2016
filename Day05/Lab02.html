@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+		<script src="jquery-2.2.4.min.js" type="text/javascript"></script>
+		<script src="bootstrap.min.js" type="text/javascript"></script>
+		<style>
+		.header{
+			margin-top:2%;
+		}
+		nav ul li {
+			margin-left:6%; 
+		}
+		.menu {
+			border-width:0.01px;
+			border:solid;
+			border-color: #8200ff;
+			height:5%;
+			background-color: #8200ff;
+			color: #FFF;
+			font-size: 15px;
+			line-height: 2em;
+		}
+		.rowmenuitem{
+			padding-right: 15%! important;
+			opacity: 0.9;
+		}
+		.main {
+			margin: 1% 0 0 20%;
+		}
+		.login{
+			border-right-style:solid;
+			border-color: rgba(0,0,0,0.5);
+			border-right-width: 0.1px;
+			color: rgba(0,0,0,0.5);
+			margin-right: 14%;
+		}
+		.login h4 {
+			padding-bottom: 5%;
+		}
+		.show {
+			float:right;
+			margin-top:-28px;
+			padding-right:10px;
+			padding-top:5px;
+			background-color: rgba(0,0,0,0.1);
+			color: #000;
+			height: 4%;
+		}
+		.loginbutton {
+			width:100%;
+			background-color: #2cadad;
+			color: #fff;
+		}
+		.linkbtn {
+			padding-left:30%;
+			color: #63c;
+		}
+		.accountbtn{
+			background-color: #2cadad;
+			color: #fff;
+			width:100%;
+		}
+		
+		</style>
+	</head>	
+	<body>
+		<div class="container">
+			<div class="row header" >
+				<nav class="col-md-12">
+					<ul class="list-inline col-md-12" >
+						<li><img style="height:60px;width:70px;" src="https://images.jet.com/videos/cms_images/images/web/jet_logo/default/desktop.png"></li>
+						<li>
+							<input type="text" class="form-control input-lg" placeholder="search" style="width:400px"><i class="glyphicon glyphicon-search" style="float:right;margin-top:-35px;margin-right:10px;font-size:1.6em;color:#2cadad"></i>
+						</li>
+						<li>Zip Code</li>
+						<li>Log In | Register</li>	
+					</ul>	
+				</nav>	
+			</div>
+			<div class="row menu">
+				<ul class="list-inline col-md-12">
+					<li class="rowmenuitem">Shop by Category</li>
+					<li class="rowmenuitem">Jet Wholesale Store</li>
+					<li class="rowmenuitem">FREE SHIPPING OVER $35</li>
+					<li style="float:right">How Jet Works</li>
+				</ul>	
+			</div>
+			<div class="row main">
+				<div class="col-md-5 login">
+					<h4>Welcome back!</h4>
+					<div class="form-group">
+						<label for="email">Email address</label>
+						<input type="email" id="email" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" id="password" class="form-control">
+						<div class="show">
+							<input type="checkbox" id="show">
+							<label for="show">Show</label>
+						</div>
+					</div>
+					<button type="button" class="btn loginbutton">Log In</button>
+					<button type="button" class="btn btn-link linkbtn">Forgot your password?</button>		
+				</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-5 register">
+					<h4>New to Jet?</h4>
+					<div class="form-group">
+						<button type="button" class="btn accountbtn">Create Account</button>
+					</div>	
+				</div>
+				
+			</div>		
+		</div>	
+	</body>
+</html>		
