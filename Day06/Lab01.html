@@ -7,8 +7,17 @@
 		$().ready(function(){
 			$('#passwordopenicon').on("mouseover",showPassword);
 			$('#passwordopenicon').on("mouseout",hidePassword);
-			$('button').on("click",login);
+			$('#loginbutton').on("click",login);
+			$('#forgotpassword_button').on("click",mailPassword);
+			$('#forgotpassword').on("show.bs.modal",showForgotPasswordModal);
 		});
+		function showForgotPasswordModal(){
+			$('#email').val('');
+			$('#message').hide();
+		}
+		function mailPassword(){
+			$('#message').show();
+		}
 		function login(){
 			var userName = $('#username').val();
 			var password = $('#password').val();
@@ -32,6 +41,7 @@
 	</head>
 	<body style="background-color:black">
 		<div class="container">
+	        
 			 <div class="row" style="margin:1%">
 				 <div class="form-group col-xs-12">
 					 <input type="text" class="form-control" placeholder="User name" id="username">
@@ -40,9 +50,35 @@
 					 <input type="password" class="form-control" placeholder="Password" id="password"><i id="passwordopenicon" class="glyphicon glyphicon-eye-open" style="float:right;margin:-27px 10px 0 0;"></i>
 				 </div>
 				 <div class="form-group col-xs-12">
-					<button type="button" class="btn btn-primary" style="width:100%">Submit</button>	 
+					<button type="button" id="loginbutton" class="btn btn-primary" style="width:100%">Submit</button>	 
+				 </div> 	 
+				 <div class="form-group col-xs-12">
+					<button type="button" class="btn btn-link" style="width:100%" data-target="#forgotpassword" data-toggle="modal">Forgot Password?</button>	 
 				 </div> 	 
 			</div>
+			
+			<div class="modal fade" tabindex="-1" role="dialog" id="forgotpassword">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" style="text-align:center">Forgot password?</h4>
+			      </div>
+			      <div class="modal-body">
+			        <div class="form-group">
+						<input type="email" placeholder="email" id="email" class="form-control">
+					</div>	
+			        <div class="form-group">
+						<button type="button" id="forgotpassword_button" class="btn btn-primary" style="width:100%;">Send</button>
+					</div>
+			        <div class="form-group">
+						<p id="message" style="text-align:center;display:none">Password sent successfully</p>
+					</div>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			
 		</div>
 	</body>
 </html>				
