@@ -25,7 +25,7 @@ function getStockSymbols(response){
 * You will send AJAX requests to the following url by passing each and every symbol.
 
 ****
-http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.fina nce.quotes%20where%20symbol%20in%20(%22ACTUALSYMBOL%22)%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json
+http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22ACTUALSYMBOL%22)%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json
 ****
 * Modify the word _ACTUALSYMBOL_ with the actual symbol.
 
