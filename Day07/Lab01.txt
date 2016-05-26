@@ -28,7 +28,7 @@ list-style-image: url("...")
 
 11) Create a box where you have a youtube video that can be played. Select any decent youtube video of your choice
 <iframe src="youtube url"></iframe>
-class="embed-responsive"
+class="embed-responsive embed-responsive-16by9"
 
 
 12) Make your entire page not scalable

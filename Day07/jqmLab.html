@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" type="text/css">
+		<script src="jquery-2.2.4.min.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		<script>
+			$().ready(function(){
+				$('#loginbutton').on("click",login);
+				$('#logoutbutton').on("click",logout);
+			});
+			function logout(){
+				$("body").pagecontainer("change","#login_page");
+			}
+			function login(){
+				if($("#username").val() == "admin" && 
+					$("#password").val() == "admin"){
+					$('#error').hide();
+					$("body").pagecontainer("change","#home_page");	
+					$("#username,#password").val("")
+				}
+				else{
+					$('#error').show();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div data-role="page" id="login_page" data-theme="b">
+			<div data-role="header">
+				<h5>Accenture</h5>
+			</div>
+			<div class="ui-content" role="main">
+				<div data-role="fieldcontain">
+					<input type="text" placeholder="User Name" id="username">
+				</div>
+				<div data-role="fieldcontain">
+					<input type="password" placeholder="Password" id="password">
+				</div>
+				<div data-role="fieldcontain">
+					<label id="error" style="color:red;width:100%;text-align:center;display:none">Your username or password is incorrect</label>
+				</div>	
+				<button type="button" id="loginbutton"  class="ui-btn">Login</button>
+			</div>		
+		</div>
+		<div data-role="page" id="home_page" data-theme="b">
+			<div data-role="header">
+				<h5>Welcome</h5>
+				<button class="ui-btn ui-btn-right" id="logoutbutton">Logout</button>
+			</div>
+			<div class="ui-content" role="main">
+			</div>
+		</div>			
+	</body>		
+</html>

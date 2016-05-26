@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" type="text/css">
+		<script src="jquery-2.2.4.min.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		<script>
+		$().ready(function(){
+			$('#btn1').on("click",function(){
+				$("body").pagecontainer("change","#page2");
+			});
+			$('#btn2').on("click",function(){
+				$("body").pagecontainer("change","#page3");
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<div data-role="page" id="page1">
+			<div data-role="header">
+				<h4>Welcome to Page 1</h4>
+			</div>
+			<div data-role="content" data-theme="b">
+				<p>Contents go here</p>
+				<!-- <a href="#page2" data-transition="slide">Go to page 2</a> -->
+				<button class="ui-btn" id="btn1">Button 1</button>
+				<button class="ui-btn" id="btn2">Button 2</button>
+			</div>
+			<div data-role="footer">
+				<h5>Copyrights 2016</h5>
+			</div>		
+		</div>
+		
+		<div data-role="page" id="page2">
+			<div data-role="header">
+				<h4>Welcome to Page 2</h4>
+			</div>
+			<div data-role="content">
+				<p>Contents go here</p>
+			</div>
+			<div data-role="footer">
+				<h5>Copyrights 2016</h5>
+			</div>		
+		</div>
+		<div data-role="page" id="page3">
+			<div data-role="header">
+				<h4>Welcome to Page 3</h4>
+			</div>
+			<div data-role="content">
+				<p>Contents go here</p>
+			</div>
+			<div data-role="footer">
+				<h5>Copyrights 2016</h5>
+			</div>		
+		</div>	
+	</body>		
+</html>
