@@ -2,7 +2,10 @@ var http = require("http");
 var fs = require("fs");
 var server = http.createServer(function(request,response){
 	var url = request.url;
-	if(url.match(/world/)){
+	if(url.match(/stock/)){
+		getSymbols(response);
+	}
+	else if(url.match(/world/)){
 		getWorldInfo(request,response);
 	}
 	else if(url == "/"){
@@ -15,6 +18,10 @@ var server = http.createServer(function(request,response){
 		sendFile(fileName,response);
 	}
 });
+function getSymbols(response){
+	var output = {"symbols": ["MS", "GOOG", "INTC", "AAPL", "GM", "FB", "INFY", "HP", "ACN"] };
+	response.end(JSON.stringify(output));
+}
 function getWorldInfo(request,response){
 	var queryString = require("url").parse(request.url,true).query;
 	var country = queryString.country;
