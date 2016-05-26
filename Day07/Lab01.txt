@@ -6,7 +6,7 @@
 6) Create a small box with a text "my box 4". The border of the box should be an image
 7) Create a simple text  "Sample text". When you hover the mouse cursor should change.
 8) Download "Roboto Mono" fonts from Google. Use that as the default font for your body. Do not use the link.
-9) When you hover any outside the boxes you have created so far, the text should change to caps.
+9) When you hover any box you have created so far, the text should change to caps.
 10) Create a list of cities (Chennai, Bengaluru, Pune, Mumbai). The bullet of the lists should be an image
 11) Create a box where you have a youtube video that can be played. Select any decent youtube video of your choice
 12) Make your entire page not scalable
