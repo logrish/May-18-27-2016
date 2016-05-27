@@ -1,0 +1,49 @@
+$mycolor: #fcf;
+$basefont: 16px;
+
+@mixin boxshadow($x,$y,$z,$clr){
+	box-shadow: $x $y $x $clr;
+	-webkit-box-shadow: $x $y $x $clr;
+	-ms-box-shadow: $x $y $x $clr;
+	-moz-box-shadow: $x $y $x $clr;
+	-o-box-shadow: $x $y $x $clr;
+}
+
+#outer1 {
+	@include boxshadow(10px,10px,2px,"pink");
+}
+#outer2 {
+	@include boxshadow(20px,20px,3px,"black");
+}
+
+
+@mixin doSomething($clr, $fontarg){
+	color: $clr;
+	font-size: $basefont + $fontarg;	
+}
+
+h1{
+	@include doSomething($mycolor,10);
+}
+p {
+	@include doSomething("green",4);
+}
+div {
+	@include doSomething("blue",-4);
+}
+
+
+//h1 {
+//	color: $mycolor;
+//	font-size: $basefont + 10;
+//}
+//
+//p {
+//	color: $mycolor;
+//	font-size: $basefont + 4;
+//}
+//
+//div {
+//	background-color: $mycolor;
+//	font-size: $basefont - 2;
+//}

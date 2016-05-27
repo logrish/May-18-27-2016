@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,EAAG;EACF,KAAK,EAHI,IAAI;EAIb,SAAS,EAAE,IAAc;;AAG1B,CAAE;EACD,KAAK,EARI,IAAI;EASb,SAAS,EAAE,IAAa;;AAGzB,GAAI;EACH,gBAAgB,EAbP,IAAI;EAcb,SAAS,EAAE,IAAa",
+"sources": ["mystyle.scss"],
+"names": [],
+"file": "day08.css"
+}

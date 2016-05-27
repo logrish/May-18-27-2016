@@ -1,0 +1,14 @@
+$clr: #ccf;
+
+#login_page{
+	background-color: $clr;	
+}
+
+#login_page {
+	input[type="text"] {
+		width: 100%;
+	}
+	button {
+		width: 100%;
+	}
+}

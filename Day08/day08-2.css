@@ -1,0 +1,27 @@
+#outer1 {
+  box-shadow: 10px 10px 10px "pink";
+  -webkit-box-shadow: 10px 10px 10px "pink";
+  -ms-box-shadow: 10px 10px 10px "pink";
+  -moz-box-shadow: 10px 10px 10px "pink";
+  -o-box-shadow: 10px 10px 10px "pink"; }
+
+#outer2 {
+  box-shadow: 20px 20px 20px "black";
+  -webkit-box-shadow: 20px 20px 20px "black";
+  -ms-box-shadow: 20px 20px 20px "black";
+  -moz-box-shadow: 20px 20px 20px "black";
+  -o-box-shadow: 20px 20px 20px "black"; }
+
+h1 {
+  color: #fcf;
+  font-size: 26px; }
+
+p {
+  color: "green";
+  font-size: 20px; }
+
+div {
+  color: "blue";
+  font-size: 12px; }
+
+/*# sourceMappingURL=day08-2.css.map */
