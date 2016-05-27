@@ -10,8 +10,20 @@
 			});
 		
 			function getInfo(){
-				//SEND AJAX requests
-				//OUR AJAX CODE GOES HERE
+				$.ajax({
+					url : "/world",
+					type : "GET",
+					dataType: "json",
+					data : {
+						country : $('#country').val() 
+					},
+					success : displayInfo
+				});
+			}
+			function displayInfo(response){
+				var output = "Capital: " + response.capital;
+				output += " Continent: " + response.continent;
+				$('#results').text(output);
 			}
 		</script>
 	</head>
@@ -24,7 +36,7 @@
 				<div class="form-group col-md-12">
 					<button type="button" class="btn btn-primary">Go</button>
 				</div>
-				<div class="col-md-12" id="results">
+				<div class="col-md-12" id="results" style="color:white">
 				</div>			
 			</div>		
       	  

@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" type="text/css">
+		<script src="jquery-2.2.4.min.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		<script>
+		$().ready(function(){
+			$('#stock_page_back_button').on("click",goBackToListPage);
+			$( "#symbol_list_page" ).pagecontainer({
+			  	create: fetchSymbols
+			});
+		});
+		function goBackToListPage(){
+			$('body').pagecontainer("change","#symbol_list_page");
+		}
+		function fetchSymbols(){
+			$.ajax({
+				url : "/stock",
+				type: "GET",
+				dataType: "json",
+				success : function(response){
+					var symbols = response.symbols;
+					for (var i = 0; i < symbols.length; i++) {
+						var symbol = symbols[i];
+						var li = "<li><a href='#' id='" + symbol + "'>" + symbol + "</a></li>";
+						$('#symbolslist').append(li);
+						$('#'+symbol).on("click",fetchStockPrice);
+					}
+					$('#symbolslist').listview("refresh");
+				}
+			});
+		}
+		function fetchStockPrice(){
+			var symbol = $(this).attr("id");
+			var url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22ACTUALSYMBOL%22)%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json".replace("ACTUALSYMBOL",symbol);
+			$.ajax({
+				url : url,
+				dataType: "json",
+				type : "GET",
+				beforeSend: function(){
+					$.mobile.loading( "show", {
+					  text: "Getting the current price of " + symbol,
+					  textVisible: true,
+					  theme: "a",
+					  html: ""
+					});
+				},
+				complete: function(){
+					$.mobile.loading( "hide", {});
+				},				
+				success: function(response){
+					$('#stock_page_header').text(symbol);
+					var price = response.query.results.quote.LastTradePriceOnly;
+					var change = response.query.results.quote.Change;
+					$('#trade_price_cell').text(price);
+					$('#change_cell').text(change);	
+					$('body').pagecontainer('change','#stock_page');
+				}
+			});
+			
+		}
+		</script>
+	</head>
+	<body>
+		<div data-role="page" id="symbol_list_page" data-theme="b">
+			<div data-role="header">
+				<h1>Stock List</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<ul data-role="listview" id="symbolslist">
+				</ul>	
+			</div>	
+		</div>	
+		<div data-role="page" data-theme="b" id="stock_page">
+			<div data-role="header">
+				<h1 id="stock_page_header"></h1>
+				<button data-icon="back" id="stock_page_back_button">Back</button>
+			</div>
+			<div class="ui-content" role="main">
+				<table class="ui-table" data-mode="reflow">
+				    <tr>
+				        <th>Last Trade Price</th>
+				        <th>Change</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+						  <td id="trade_price_cell"></td>
+						  <td id="change_cell"></td>
+				      </tr>
+				      </tbody>
+				</table>	
+			</div>		
+		</div>	
+	</body>		
+</html>
